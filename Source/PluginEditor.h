@@ -1,72 +1,40 @@
 /*
   ==============================================================================
 
-  This is an automatically generated GUI class created by the Projucer!
+    This file was auto-generated!
 
-  Be careful when adding custom code to these files, as only the code within
-  the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
-  and re-saved.
-
-  Created with Projucer version: 4.3.0
-
-  ------------------------------------------------------------------------------
-
-  The Projucer is part of the JUCE library - "Jules' Utility Class Extensions"
-  Copyright (c) 2015 - ROLI Ltd.
+    It contains the basic framework code for a JUCE plugin editor.
 
   ==============================================================================
 */
 
-#ifndef __JUCE_HEADER_FC76FA5BA2987F99__
-#define __JUCE_HEADER_FC76FA5BA2987F99__
+#ifndef PLUGINEDITOR_H_INCLUDED
+#define PLUGINEDITOR_H_INCLUDED
 
-//[Headers]     -- You can add your own extra header files here --
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
-//[/Headers]
-
 
 
 //==============================================================================
 /**
-                                                                    //[Comments]
-    An auto-generated component, created by the Projucer.
-
-    Describe your class and how it works here!
-                                                                    //[/Comments]
 */
-class StereoPannerAudioProcessorEditor  : public AudioProcessorEditor
+class StereoPanner_lab3AudioProcessorEditor  : public AudioProcessorEditor
 {
 public:
-    //==============================================================================
-    StereoPannerAudioProcessorEditor (StereoPannerAudioProcessor);
-    ~StereoPannerAudioProcessorEditor();
+    StereoPanner_lab3AudioProcessorEditor (StereoPanner_lab3AudioProcessor&);
+    ~StereoPanner_lab3AudioProcessorEditor();
 
     //==============================================================================
-    //[UserMethods]     -- You can add your own custom methods in this section.
-	void timeCallback();
-    //[/UserMethods]
-
-    void paint (Graphics& g) override;
+    void paint (Graphics&) override;
     void resized() override;
 
-
-
 private:
-    //[UserVariables]   -- You can add your own custom variables in this section.
-	StereoPannerAudioProcessorEditor &processor;
+    // This reference is provided as a quick way for your editor to
+    // access the processor object that created it.
+    StereoPanner_lab3AudioProcessor& processor;
 
-    //[/UserVariables]
-
-    //==============================================================================
-
-
-    //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (StereoPannerAudioProcessorEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (StereoPanner_lab3AudioProcessorEditor)
 };
 
-//[EndFile] You can add extra defines here...
 
-//[/EndFile]
-
-#endif   // __JUCE_HEADER_FC76FA5BA2987F99__
+#endif  // PLUGINEDITOR_H_INCLUDED
